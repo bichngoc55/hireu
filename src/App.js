@@ -1,10 +1,14 @@
 // App.js
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 // import "./App.css";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
+import JobBoard from "./pages/JobBoard";
 import JobPortalPage from "./pages/JobPortalPage";
+import JobDetails from "./pages/Jobdetails";
+import Question from "./pages/Question";
+import SaveList from "./pages/SaveJob";
 
 function App() {
   return (
@@ -14,6 +18,11 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/jobs" element={<JobPortalPage />} />
+          <Route path="/jobboard" element={<JobBoard />} />
+          <Route path="/jobdetail" element={<JobDetails />} />
+          <Route path="/question" element={<Question />} />
+          <Route path="/savelist" element={<SaveList />} />
+
         </Routes>
       </div>
     </Router>
