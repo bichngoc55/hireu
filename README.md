@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+<div align="center">
+    <a href="https://www.uit.edu.vn/" title="Trường Đại học Công nghệ Thông tin" target="_blank">
+        <img src="https://www.uit.edu.vn/sites/vi/files/banner_uit_15.png">
+    </a>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+- [Tính Năng](#features)
+- [Công nghệ](#technology)
+- [Demo](#Demo)
+- [Thông tin môn học](#ThongTin)
+- [Đóng góp](#contribution)
+  
+# APP HIRE-U
 
-## Available Scripts
 
-In the project directory, you can run:
+ ## <a name="features">Chức năng</a>
 
-### `npm start`
+- Responsive Design: Đảm bảo trải nghiệm liền mạch trên nhiều thiết bị và kích thước màn hình khác nhau.
+- Modern UI: Giao diện người dùng sáng tạo với bố cục trực quan, tuân theo những xu hướng thiết kế web mới nhất.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## <a name="technology">Công Nghệ</a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React & MUI 
+- React Native 
+  
+## <a name="Demo">Demo</a>
 
-### `npm test`
+# <a name="ThongTin">Thông Tin Môn Học</a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Môn Học        | Lập trình trực quan |
+| -------------- | -------------------- |
+| Lớp            | SE215.P11            |
+| GV Lý Thuyết   | Ths. Nguyễn Công Hoan |
 
-### `npm run build`
+# <a name="contribution">Thông Tin Thành Viên</a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| MSSV       | Họ và Tên          | Email                   | Github                                                                                                                      |
+| ---------- | ------------------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `22520957` | Nguyễn Thị Bích Ngọc| 222520957@gm.uit.edu.vn | [![](https://img.shields.io/badge/bichngoc-%2324292f.svg?style=flat-square&logo=github      )](https://github.com/bichngoc55) |
+| `22521644` | Trần Huỳnh Nhã Uyên| 22521644@gm.uit.edu.vn | [![](https://img.shields.io/badge/tranuyn-%2324292f.svg?style=flat-square&logo=github      )](https://github.com/tranuyn) |
+| `22520925` | Hồ Kim Thiên Nga| 22520925@gm.uit.edu.vn | [![](https://img.shields.io/badge/thiennga-%2324292f.svg?style=flat-square&logo=github      )](https://github.com/cabungbu/) |
+| `22521314` | Hồ Huỳnh Thiên | 22521314@gm.uit.edu.vn | [![](https://img.shields.io/badge/huynhthien-%2324292f.svg?style=flat-square&logo=github      )](https://github.com/huynhthien17/) |
