@@ -1,79 +1,68 @@
-// ExpertCard.js
 import React from "react";
-import { Box, Card, Typography, Avatar, Button } from "@mui/material";
-
+import defaultAvatar from '../assets/hinh-anh-10-diem.jpg';
 const ExpertCard = ({ name, role, experience, avatarUrl, onViewProfile }) => {
   return (
-    <Card
-      sx={{
-        mb: 2,
-        p: 2,
+    <div
+      style={{
+        marginBottom: "10px",
+        padding: "15px",
         boxShadow: "none",
         backgroundColor: "white",
         borderRadius: "8px",
         display: "flex",
         alignItems: "center",
-        gap: 2,
+        gap: "10px",
       }}
     >
-      <Avatar
-        src={avatarUrl}
-        sx={{
-          width: 60,
-          height: 60,
+      <img
+        // src={avatarUrl ? avatarUrl : defaultAvatar}
+        src={ defaultAvatar}
+        alt={name}
+        style={{
+          width: "20%",
+          aspectRatio: "1 / 1",
           borderRadius: "8px",
         }}
-        variant="square"
       />
-      <Box sx={{ flex: 1 }}>
-        <Typography
-          sx={{
+      <div style={{ flex: 1 }}>
+        <p
+          style={{
             fontWeight: 600,
             fontSize: "1rem",
-            fontFamily: "Asap, sans-serif",
-            mb: 0.5,
+            fontFamily: "'Asap', sans-serif",
           }}
         >
           {name}
-        </Typography>
-        <Typography
-          sx={{
+        </p>
+        <p
+          style={{
             color: "#666",
             fontSize: "0.9rem",
-            fontFamily: "Asap, sans-serif",
-            mb: 0.5,
+            fontFamily: "'Asap', sans-serif",
           }}
         >
-          {role}
-        </Typography>
-        <Typography
-          sx={{
-            color: "#666",
-            fontSize: "0.9rem",
-            fontFamily: "Asap, sans-serif",
-          }}
-        >
-          {experience}
-        </Typography>
-      </Box>
-      <Button
-        variant="contained"
+          {role} <br /> {experience}
+        </p>
+      </div>
+      <button
         onClick={onViewProfile}
-        sx={{
+        style={{
           backgroundColor: "#CBEAFF",
           color: "#4B93CD",
           textTransform: "none",
-          fontFamily: "Asap, sans-serif",
+          fontFamily: "'Asap', sans-serif",
           boxShadow: "none",
-          "&:hover": {
-            backgroundColor: "#bde0f7",
-            boxShadow: "none",
-          },
+          border: "none",
+          padding: "8px",
+          borderRadius: 5,
+          cursor: "pointer",
         }}
+        onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#bde0f7")}
+        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#CBEAFF")}
       >
         Xem hồ sơ
-      </Button>
-    </Card>
+      </button>
+    </div>
   );
 };
 

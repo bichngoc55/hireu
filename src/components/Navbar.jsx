@@ -17,8 +17,9 @@ import {
   GroupOutlined,
   //   NotificationsOutlined,
 } from "@mui/icons-material";
-// import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
-import { FaFacebook } from "react-icons/fa";
+
+import logo from "../assets/logo_HireU.png";
+
 import { AiTwotoneMessage } from "react-icons/ai";
 import { IoMdNotifications } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
@@ -90,7 +91,14 @@ const Navbar = () => {
     >
       <Toolbar sx={{ justifyContent: "space-between" }}>
         <Box sx={{ display: "flex", alignItems: "center" }}>
-          <FaFacebook sx={{ width: "20px" }} />
+          <img
+            src={logo}
+            style={{
+              width: "50px",
+              aspectRatio: "1 / 1",
+              borderRadius: "100px",
+            }}
+          />
         </Box>
         <Box
           sx={{
@@ -106,7 +114,7 @@ const Navbar = () => {
               active={activeTab === item.id}
               onClick={() => {
                 setActiveTab(item.id);
-                navigate(item.path);
+                navigate(item.id);
               }}
             >
               <item.icon />

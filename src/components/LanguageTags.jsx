@@ -1,25 +1,52 @@
-// LanguageTags.js
 import React from "react";
-import { Box, Chip } from "@mui/material";
 
-const LanguageTags = ({ languages, onLanguageSelect }) => {
+const LanguageTags = ({ languages, onLanguageSelect, selectedLanguage }) => {
   return (
-    <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap", mb: 3 }}>
+    <div
+      style={{
+        display: "flex",
+        gap: "8px",
+        flexWrap: "wrap",
+        marginBottom: "24px",
+      }}
+    >
       {languages.map((lang) => (
-        <Chip
+        <div
           key={lang.name}
-          label={`${lang.name} ${lang.count}`}
           onClick={() => onLanguageSelect(lang.name)}
-          sx={{
-            backgroundColor: "#6698CB",
-            color: "white",
-            "&:hover": {
-              backgroundColor: "#5588bb",
-            },
+          style={{
+            backgroundColor:
+              selectedLanguage === lang.name ? "#4B93CD" : "white",
+            color: selectedLanguage === lang.name ? "white" : "#a0a0a0",
+            padding: "4px 10px",
+            borderRadius: "16px",
+            display: "flex",
+            alignItems: "center",
+            cursor: "pointer",
+            transition: "color 0.3s",
           }}
-        />
+          onMouseEnter={(e) => {
+            e.currentTarget.style.color = "#5588bb";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.color =
+              selectedLanguage === lang.name ? "white" : "#a0a0a0";
+          }}
+        >
+          <span style={{ marginRight: "6px" }}>{lang.name}</span>
+          <span
+            style={{
+              backgroundColor: selectedLanguage === lang.name ? "white" : "#4B93CD",
+              borderRadius: "12px",
+              padding: "0px 8px",
+              color: selectedLanguage === lang.name ? "#4B93CD" : "white"
+            }}
+          >
+            {lang.count}
+          </span>
+        </div>
       ))}
-    </Box>
+    </div>
   );
 };
 
