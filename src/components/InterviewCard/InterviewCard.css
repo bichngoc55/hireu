@@ -1,0 +1,97 @@
+.interview-card {
+  margin-bottom: 16px; /* Tương đương với sx={{ mb: 2 }} */
+  padding: 16px;
+  background-color: #d3eeff;
+  border-radius: 8px;
+  transition: box-shadow 0.3s;
+}
+
+.interview-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  display: flex;
+  gap: 16px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+.card-details {
+  flex: 1;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.remaining-spots {
+  color: #4b93cd;
+  font-size: 0.9rem;
+}
+
+.interviewer-info {
+  color: #666;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.skills {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.skill-chip {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #4b93cd;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date-time {
+  display: flex;
+  align-items: center;
+}
+
+.date,
+.duration {
+  color: #666;
+  font-size: 0.9rem;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+
+.register-button {
+  color: #4B93CD;
+  background-color: white;
+  padding: 8px 16px;
+  border: 1px solid #4B93CD;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Asap", sans-serif;
+}
+
+.register-button:hover {
+  background-color: #98C4EB;
+  color: white;
+  border: none
+}

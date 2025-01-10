@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import "./App.css";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
-import JobPortalPage from "./pages/JobPortalPage";
+import JobPortalPage from "./pages/JobPortalPage/JobPortalPage";
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/jobs" element={<JobPortalPage />} />
+          {/* <Route path="/jobs" element={<JobPortalPage />} /> */}
         </Routes>
       </div>
     </Router>

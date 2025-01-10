@@ -1,0 +1,274 @@
+.calendar-wrapper {
+  display: flex;
+  gap: 24px;
+}
+
+.calendar-section {
+  flex: 1;
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+  font-style: italic;
+  margin-bottom: 16px;
+  color: #666;
+}
+
+.month-navigator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.nav-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 100px;
+  padding-top: 5px;
+  padding-bottom: 1px;
+}
+
+.nav-button:hover {
+  background-color: #f5f5f5;
+}
+
+.month-title {
+  color: #4b93cd;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 24px;
+}
+
+.day-header {
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.calendar-day:hover {
+  background-color: #f5f5f5;
+}
+
+.calendar-day.inactive {
+  color: #ccc;
+}
+
+.calendar-day.selected {
+  background-color: #4b93cd;
+  color: white !important;
+}
+
+.calendar-day.selected:hover {
+  background-color: #4b93cd;
+}
+
+.calendar-day.has-events {
+  color: red;
+}
+
+.calendar-day.today {
+  font-weight: 600;
+}
+
+.events-section {
+  flex: 1;
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.events-title {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #4b93cd;
+  text-align: center;
+}
+
+.event-card {
+  padding: 16px;
+  margin-bottom: 8px;
+  background-color: #f5f7fa;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.event-time {
+  color: #4b93cd;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.event-title {
+  font-weight: 500;
+  margin-bottom: 4px;
+  flex: 1;
+}
+
+.event-link {
+  color: #4b93cd;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.event-link:hover {
+  text-decoration: underline;
+}
+
+.delete-button {
+  padding: 5px 5px 1px 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: red;
+  border-radius: 100px;
+}
+
+.delete-button:hover {
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+/* Cancel Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 60%;
+  max-height: 90vh;
+  overflow: auto;
+  position: relative;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.modal-subtitle {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.reason-box {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  transition: background-color 0.2s ease;
+}
+
+.reason-box:hover {
+  background-color: #e3f2fd;
+}
+
+.reason-box.selected {
+  background-color: #e3f2fd;
+  border: 1px solid #4b93cd;
+}
+
+.custom-reason-textarea {
+  font-family: "Asap";
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  min-height: 100px;
+  resize: vertical;
+  transition: background-color 0.2s ease, border 0.2s ease; 
+}
+
+.custom-reason-textarea.selected {
+  background-color: #e3f2fd;
+  border: 1px solid #4b93cd;
+}
+
+.note-title {
+  font-size: 1rem;
+  color: red;
+  margin-bottom: 0.5rem;
+}
+
+.note-text {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cancel-button {
+  flex: 1;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cancel-button:hover {
+  background-color: #f5f5f5;
+}
+
+.confirm-button {
+  flex: 1;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.confirm-button:hover {
+  opacity: 0.9;
+}
+
+.confirm-button.disabled {
+  background-color: #ffcccc6a;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
