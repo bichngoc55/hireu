@@ -91,6 +91,7 @@
 
 .calendar-day.today {
   font-weight: 600;
+  color: #4b93cd;
 }
 
 .events-section {
@@ -112,7 +113,7 @@
   padding: 16px;
   margin-bottom: 8px;
   background-color: #f5f7fa;
-  border-radius: 4px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
 }

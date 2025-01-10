@@ -1,15 +1,16 @@
-import { Box, CssBaseline, Typography } from "@mui/material";
 import React, { useState } from "react";
+import { Box, Typography, CssBaseline } from "@mui/material";
 import { AiOutlineLike } from "react-icons/ai";
-import { IoSaveOutline } from "react-icons/io5";
-import { LuFileQuestion } from "react-icons/lu";
+import { LuCalendarDays, LuFileQuestion } from "react-icons/lu";
 
-import ExpertCard from "../../components/ExpertCard";
-import InterviewCard from "../../components/InterviewCard/InterviewCard";
-import LanguageTags from "../../components/LanguageTags";
 import SearchSection from "../../components/SearchSection/SearchSection";
+import LanguageTags from "../../components/LanguageTags";
+import InterviewCard from "../../components/InterviewCard/InterviewCard";
+import ExpertCard from "../../components/ExpertCard";
+import InterviewCalendar from "./InterviewCalendar";
+import RegistrationRules from "./RegistrationRules";
 
-const JobPortalPage = () => {
+function TrialInterview() {
   const [selectedTab, setSelectedTab] = useState("home");
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("");
@@ -27,11 +28,17 @@ const JobPortalPage = () => {
       color: "#85b7e7",
     },
     {
-      icon: IoSaveOutline,
-      text: "Đã lưu",
+      icon: LuCalendarDays,
+      text: "Lịch phỏng vấn",
       id: "schedule",
       color: "#85b7e7",
-    }
+    },
+    {
+      icon: LuFileQuestion,
+      text: "Ngân hàng câu hỏi phỏng vấn",
+      id: "participated",
+      color: "#85b7e7",
+    },
   ];
 
   const interviewsData = [
@@ -269,10 +276,16 @@ const JobPortalPage = () => {
               ))}
             </Box>
           )}
+          {selectedTab === "schedule" && (
+            <Box sx={{ flex: 2, maxWidth: "100%" }}>
+              <InterviewCalendar />
+              {/* <RegistrationRules /> */}
+            </Box>
+          )}
         </Box>
       </Box>
     </Box>
   );
-};
+}
 
-export default JobPortalPage;
+export default TrialInterview;

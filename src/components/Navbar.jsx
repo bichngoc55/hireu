@@ -20,8 +20,6 @@ import {
 
 import logo from "../assets/logo_HireU.png";
 
-// import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
-import { FaFacebook } from "react-icons/fa";
 import { AiTwotoneMessage } from "react-icons/ai";
 import { IoMdNotifications } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
@@ -116,7 +114,7 @@ const Navbar = () => {
               active={activeTab === item.id}
               onClick={() => {
                 setActiveTab(item.id);
-                navigate(item.path);
+                navigate(item.id);
               }}
             >
               <item.icon />

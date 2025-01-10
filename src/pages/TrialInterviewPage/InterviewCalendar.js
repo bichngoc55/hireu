@@ -199,33 +199,36 @@ const InterviewCalendar = () => {
       <div className="events-section">
         <h2 className="events-title">Các buổi phỏng vấn trong ngày</h2>
 
-        {events[formatDate(selectedDate)]?.map((event, index) => (
-          <div key={index} className="event-card">
-            <div className="event-time">{event.time}</div>
-            <div
-              className="event-info"
-              style={{ flex: 1, marginLeft: "10px", marginRight: "10px" }}
-            >
-              <div className="event-title">{event.title}</div>
-              <a
-                href={`https://${event.link}`}
-                className="event-link"
-                target="_blank"
-                rel="noopener noreferrer"
+        {events[formatDate(selectedDate)]?.length > 0 ? (
+          events[formatDate(selectedDate)].map((event, index) => (
+            <div key={index} className="event-card">
+              <div className="event-time">{event.time}</div>
+              <div
+                className="event-info"
+                style={{ flex: 1, marginLeft: "10px", marginRight: "10px" }}
               >
-                {event.link}
-              </a>
+                <div className="event-title">{event.title}</div>
+                <a
+                  href={`https://${event.link}`}
+                  className="event-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {event.link}
+                </a>
+              </div>
+              <button
+                className="delete-button"
+                onClick={() => handleDeleteEvent(event)}
+              >
+                <IoIosTrash size={20} />
+              </button>
             </div>
-            <button
-              className="delete-button"
-              onClick={() => handleDeleteEvent(event)}
-            >
-              <IoIosTrash size={20} />
-            </button>
-          </div>
-        ))}
+          ))
+        ) : (
+          <div className="calendar-header" style={{color: '#a0a0a0', textAlign: 'center'}}>Không có buổi phỏng vấn nào trong ngày {formatDate(selectedDate)}</div>
+        )}
       </div>
-
       <CancelModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
