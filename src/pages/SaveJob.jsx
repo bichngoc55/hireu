@@ -1,14 +1,13 @@
-import { FavoriteBorder, ThumbUp } from '@mui/icons-material';
 import {
-    Box,
-    Button,
-    Card,
-    CardContent,
-    Chip,
-    FormControlLabel,
-    Radio,
-    RadioGroup,
-    Typography
+  Box,
+  Button,
+  Card,
+  CardContent,
+  Chip,
+  FormControlLabel,
+  Radio,
+  RadioGroup,
+  Typography
 } from '@mui/material';
 import React, { useState } from 'react';
 
@@ -62,31 +61,8 @@ const SaveList = () => {
     >
       <Box sx={{ display: 'flex', maxWidth: '100%' }}>
         
-        {/* Left Sidebar */}
-        <Box sx={{ width: 240, p: 3, pl: 4 }}>
-          <Box sx={{ mb: 3 }}>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
-              <ThumbUp sx={{ color: '#4B93CD' }} />
-              <Typography sx={{ color: '#4B93CD' }}>Gợi ý cho bạn</Typography>
-            </Box>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <Box 
-                sx={{ 
-                  width: 28, 
-                  height: 28, 
-                  borderRadius: '50%',
-                  border: '1px solid #6D6C6C',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
-                }}
-              >
-                <FavoriteBorder sx={{ fontSize: 16 }} />
-              </Box>
-              <Typography>Đã lưu</Typography>
-            </Box>
-          </Box>
-        </Box>
+       
+        
 
         {/* Main Content */}
         <Box 
