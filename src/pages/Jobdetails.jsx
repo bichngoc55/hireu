@@ -1,4 +1,14 @@
-// Question.jsx
+import { ArrowBack, FavoriteBorder, Search, ThumbUp } from '@mui/icons-material';
+import {
+  Box,
+  Button,
+  Chip,
+  InputAdornment,
+  TextField,
+  Typography
+} from '@mui/material';
+import React from 'react';
+
 import React from "react";
 import "./Question.css";
 import { SearchIcon } from "./icons"; // You'll need to create this icon component
