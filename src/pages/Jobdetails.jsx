@@ -1,11 +1,11 @@
 import { ArrowBack, FavoriteBorder, Search, ThumbUp } from '@mui/icons-material';
 import {
-    Box,
-    Button,
-    Chip,
-    InputAdornment,
-    TextField,
-    Typography
+  Box,
+  Button,
+  Chip,
+  InputAdornment,
+  TextField,
+  Typography
 } from '@mui/material';
 import React from 'react';
 
