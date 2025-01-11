@@ -69,7 +69,7 @@ const NavbarItem = styled(Box)(({ theme, active }) => ({
 }));
 
 const Navbar = () => {
-  const [activeTab, setActiveTab] = useState("home");
+  const [activeTab, setActiveTab] = useState("/home");
   const navigate = useNavigate();
   const navItems = [
     { id: "/home", icon: HomeOutlined, label: "Trang chủ" },
