@@ -1,15 +1,14 @@
+import { Box, CssBaseline, Typography } from "@mui/material";
 import React, { useState } from "react";
-import { Box, Typography, CssBaseline } from "@mui/material";
 import { AiOutlineLike } from "react-icons/ai";
 import { LuCalendarDays, LuFileQuestion } from "react-icons/lu";
 
-import SearchSection from "../../components/SearchSection/SearchSection";
-import LanguageTags from "../../components/LanguageTags";
-import InterviewCard from "../../components/InterviewCard/InterviewCard";
 import ExpertCard from "../../components/ExpertCard";
+import InterviewCard from "../../components/InterviewCard/InterviewCard";
+import LanguageTags from "../../components/LanguageTags";
+import SearchSection from "../../components/SearchSection/SearchSection";
+import Question from "../Question";
 import InterviewCalendar from "./InterviewCalendar";
-import RegistrationRules from "./RegistrationRules";
-import Question from "../Question"
 function TrialInterview() {
   const [selectedTab, setSelectedTab] = useState("home");
   const [searchTerm, setSearchTerm] = useState("");
@@ -281,11 +280,20 @@ function TrialInterview() {
               <InterviewCalendar />
             </Box>
           )}
-          {selectedTab === "questions" && (
-            <Box sx={{ flex: 2, maxWidth: "100%" }}>
+          {/* {selectedTab === "questions" && (
+            <Box sx={{ flex:2, maxWidth: "100%" }}>
               <Question/>
             </Box>
-          )}
+          )} */}
+          {selectedTab === "questions" && (
+          <Box sx={{ 
+            flex: 2,
+            width: '150%',
+            maxWidth: '150%'
+          }}>
+              <Question/>
+          </Box>
+        )}
         </Box>
       </Box>
     </Box>
