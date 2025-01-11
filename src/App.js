@@ -13,6 +13,7 @@ import ProfilePage from "./pages/Profile/Profile";
 import SaveList from "./pages/SaveJob";
 import RegistrationRules from "./pages/TrialInterviewPage/RegistrationRules";
 import TrialInterview from "./pages/TrialInterviewPage/TrialInterview";
+import Question from "./pages/Question";
 
 function App() {
   return (
@@ -26,11 +27,13 @@ function App() {
           <Route path="/interview" element={<TrialInterview />} />
           <Route path="/interview/detail" element={<InterviewDetail />} />
           <Route path="/registration-rules" element={<RegistrationRules/>}/>
+
           <Route path="/jobdetails" element={<JobDetails/>}/>
 
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/jobboard" element={<JobBoard/>}/>
           <Route path="/save" element={<SaveList/>}/>
+
 
 
         </Routes>

@@ -9,7 +9,7 @@ import InterviewCard from "../../components/InterviewCard/InterviewCard";
 import ExpertCard from "../../components/ExpertCard";
 import InterviewCalendar from "./InterviewCalendar";
 import RegistrationRules from "./RegistrationRules";
-
+import Question from "../Question"
 function TrialInterview() {
   const [selectedTab, setSelectedTab] = useState("home");
   const [searchTerm, setSearchTerm] = useState("");
@@ -36,7 +36,7 @@ function TrialInterview() {
     {
       icon: LuFileQuestion,
       text: "Ngân hàng câu hỏi phỏng vấn",
-      id: "participated",
+      id: "questions",
       color: "#85b7e7",
     },
   ];
@@ -279,7 +279,11 @@ function TrialInterview() {
           {selectedTab === "schedule" && (
             <Box sx={{ flex: 2, maxWidth: "100%" }}>
               <InterviewCalendar />
-              {/* <RegistrationRules /> */}
+            </Box>
+          )}
+          {selectedTab === "questions" && (
+            <Box sx={{ flex: 2, maxWidth: "100%" }}>
+              <Question/>
             </Box>
           )}
         </Box>

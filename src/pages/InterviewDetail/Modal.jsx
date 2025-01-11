@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import "./style.css"; // Import CSS để tạo kiểu cho modal
+import { useNavigate, useNavigation } from "react-router-dom";
 
 const Modal = ({ isOpen, onClose, children }) => {
+  const navigate = useNavigate()
   const [selected, setSelected] = useState();
   if (!isOpen) return null;
-
+  const handleTerm = () => {
+    navigate('/registration-rules');
+  };
   return (
     <div className="modal-overlayd">
       <div className="modal-contentd">
@@ -39,8 +43,10 @@ const Modal = ({ isOpen, onClose, children }) => {
           />
           <div className="expe">
             Tôi đồng ý với{" "}
-            <span className="underlineds">điều khoản và quy định</span> tham gia
-            phỏng vấn của HireU
+            <span className="underlineds" onClick={handleTerm}>
+              điều khoản và quy định
+            </span>{" "}
+            tham gia phỏng vấn của HireU
           </div>
         </div>
 
