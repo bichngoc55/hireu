@@ -167,6 +167,7 @@
   color: #ff0000;
   text-decoration: underline; /* Gạch chân */
   font-style: italic;
+  cursor: pointer;
 }
 .HUYBTN {
   padding: 10px 20px;

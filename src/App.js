@@ -9,6 +9,7 @@ import JobPortalPage from "./pages/JobPortalPage/JobPortalPage";
 import RegistrationRules from "./pages/TrialInterviewPage/RegistrationRules";
 import InterviewDetail from "./pages/InterviewDetail/InterviewDetail";
 import TrialInterview from "./pages/TrialInterviewPage/TrialInterview";
+import Question from "./pages/Question";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
 
           <Route path="/interview" element={<TrialInterview />} />
           <Route path="/interview/detail" element={<InterviewDetail />} />
+          <Route path="/registration-rules" element={<RegistrationRules/>}/>
         </Routes>
       </div>
     </Router>
