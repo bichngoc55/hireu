@@ -1,16 +1,25 @@
-/* Question.css */
 .question-container {
   background-color: #f4f4f4;
-  display: flex;
-  gap: 24px;
+  min-height: 100vh;
+  width: 100%; /* Thêm width: 100% */
 }
 
 .content-wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%; /* Thêm width: 100% */
+  gap: 24px;
 }
 
 .main-content {
-  flex: 1;
+  flex: 4;
   padding: 24px;
+}
+
+.sidebar {
+  flex: 1.5;
+  padding: 24px 32px 24px 24px;
 }
 
 /* Search Section */
@@ -126,12 +135,6 @@
   background-color: #3d7ab0;
 }
 
-/* Sidebar */
-.sidebar {
-  flex: 1;
-  padding: 24px 32px 24px 24px;
-}
-
 .sidebar-title {
   font-size: 20px;
   font-weight: 500;
@@ -183,39 +186,9 @@
   padding: 6px 12px;
   cursor: pointer;
   transition: border-color 0.3s;
+  width: 100%;
 }
 
 .view-company-btn:hover {
   border-color: #3d7ab0;
 }
-/* 
-Responsive Design
-@media (max-width: 1200px) {
-  .content-wrapper {
-    flex-direction: column;
-  }
-
-  .main-content,
-  .sidebar {
-    padding: 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .filter-section {
-    flex-direction: column;
-  }
-
-  .filter-select {
-    width: 100%;
-  }
-
-  .question-content {
-    flex-direction: column;
-  }
-
-  .question-actions {
-    text-align: left;
-    margin-top: 16px;
-  }
-} */

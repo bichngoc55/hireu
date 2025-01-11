@@ -10,10 +10,10 @@ import JobBoard from "./pages/JobBoard";
 import JobDetails from "./pages/Jobdetails";
 import JobPortalPage from "./pages/JobPortalPage/JobPortalPage";
 import ProfilePage from "./pages/Profile/Profile";
+import Question from "./pages/Question";
 import SaveList from "./pages/SaveJob";
 import RegistrationRules from "./pages/TrialInterviewPage/RegistrationRules";
 import TrialInterview from "./pages/TrialInterviewPage/TrialInterview";
-import Question from "./pages/Question";
 
 function App() {
   return (
@@ -29,6 +29,7 @@ function App() {
           <Route path="/registration-rules" element={<RegistrationRules/>}/>
 
           <Route path="/jobdetails" element={<JobDetails/>}/>
+          <Route path="/question" element={<Question/>}/>
 
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/jobboard" element={<JobBoard/>}/>

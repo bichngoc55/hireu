@@ -1,16 +1,3 @@
-import { FavoriteBorder, Search, ThumbUp } from "@mui/icons-material";
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  Chip,
-  InputAdornment,
-  MenuItem,
-  Select,
-  TextField,
-  Typography,
-} from "@mui/material";
 import React from "react";
 import './Question.css';
 
