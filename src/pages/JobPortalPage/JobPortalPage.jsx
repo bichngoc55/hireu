@@ -1,18 +1,26 @@
-import { Box, CssBaseline, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  CssBaseline,
+  Typography,
+} from "@mui/material";
 import React, { useState } from "react";
 import { AiOutlineLike } from "react-icons/ai";
 import { IoSaveOutline } from "react-icons/io5";
 import { LuFileQuestion } from "react-icons/lu";
 
-import ExpertCard from "../../components/ExpertCard";
-import InterviewCard from "../../components/InterviewCard/InterviewCard";
-import LanguageTags from "../../components/LanguageTags";
-import SearchSection from "../../components/SearchSection/SearchSection";
+import { useNavigate } from "react-router-dom";
+import JobBoard from "../JobBoard";
+import JobDetails from "../Jobdetails";
+import SaveList from "../SaveJob";
 
 const JobPortalPage = () => {
   const [selectedTab, setSelectedTab] = useState("home");
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("");
+  const navigate = useNavigate();
   const [filters, setFilters] = useState({
     level: "",
     position: "",
@@ -31,7 +39,7 @@ const JobPortalPage = () => {
       text: "Đã lưu",
       id: "schedule",
       color: "#85b7e7",
-    }
+    },
   ];
 
   const interviewsData = [
@@ -181,7 +189,6 @@ const JobPortalPage = () => {
           width: 240,
           p: 2,
           backgroundColor: "white",
-          // position: "fixed",
         }}
       >
         {sidebarItems.map((item) => (
@@ -225,48 +232,85 @@ const JobPortalPage = () => {
             margin: "0 auto",
             display: "grid",
             gridTemplateColumns:
-              selectedTab === "schedule" ? "1fr" : "1fr 380px",
+              selectedTab === "schedule" || selectedTab === "details"
+                ? "1fr"
+                : "1fr 380px",
             gap: 3,
           }}
         >
-          {/* Left column */}
-          {selectedTab === "home" && (
-            <Box>
-              <SearchSection
-                onSearch={handleSearch}
-                onFilterChange={handleFilterChange}
-                filters={filters}
-              />
-              <LanguageTags
-                languages={languagesData}
-                onLanguageSelect={handleLanguageSelect}
-                selectedLanguage={selectedLanguage}
-              />
-              <Box>
-                {filteredInterviews.map((interview) => (
-                  <InterviewCard key={interview.id} {...interview} />
-                ))}
-              </Box>
+          {selectedTab === "schedule" && (
+            <Box sx={{ flex: 2, maxWidth: "100%" }}>
+              <SaveList />
             </Box>
           )}
-
-          {/* Right column */}
+          {selectedTab === "details" && (
+            <Box sx={{ flex: 2, maxWidth: "100%" }}>
+              <JobDetails />
+            </Box>
+          )}
           {selectedTab === "home" && (
-            <Box>
-              <Typography
-                variant="h6"
-                mb={2}
-                sx={{
-                  fontFamily: "Asap, sans-serif",
-                  fontWeight: 600,
-                  color: "#4B93CD",
-                }}
-              >
-                Top chuyên gia nổi bật
+            <Box sx={{ flex: 2, maxWidth: "100%" }}>
+              <JobBoard setSelectedTab={setSelectedTab} />
+            </Box>
+          )}
+          {selectedTab === "home" && (
+            <Box sx={{ width: 450, p: 3, pr: 4 }}>
+              <Typography variant="h6" sx={{ fontWeight: 500, mb: 2 }}>
+                Top công ty nổi bật
               </Typography>
-              {expertsData.map((expert) => (
-                <ExpertCard key={expert.id} {...expert} />
-              ))}
+              <Card sx={{ borderRadius: 3, mb: 2 }}>
+                <CardContent>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      gap: 2,
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Box sx={{ display: "flex", gap: 2 }}>
+                      <img
+                        src="/logo-1.png"
+                        alt="NashTech"
+                        style={{
+                          borderRadius: "50%", // Định dạng hình tròn
+                          width: "60px", // Chiều rộng
+                          height: "60px", // Chiều cao
+                          objectFit: "cover", // Đảm bảo hình ảnh không bị biến dạng
+                        }}
+                      />
+                      <Box>
+                        <Typography variant="h6" sx={{ fontWeight: 500 }}>
+                          NashTech
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary">
+                          1000+ nhân viên
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary">
+                          BA, Tester, UI/UX
+                        </Typography>
+                      </Box>
+                    </Box>
+                    <Button
+                      variant="outlined"
+                      size="small"
+                      sx={{
+                        borderRadius: 1,
+                        bgcolor: "#CBEAFF", // Màu nền
+                        borderColor: "#CBEAFF",
+                        color: "#4B93CD", // Màu chữ
+                        display: "flex",
+                        alignItems: "center",
+                        "&:hover": {
+                          borderColor: "#3d7ab0",
+                        },
+                      }}
+                    >
+                      Xem công ty
+                    </Button>
+                  </Box>
+                </CardContent>
+              </Card>
             </Box>
           )}
         </Box>

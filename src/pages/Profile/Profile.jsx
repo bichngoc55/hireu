@@ -1,4 +1,4 @@
-import { Add, Close, Edit, FavoriteBorder, ThumbUp } from "@mui/icons-material";
+import { Add, Close, Edit } from "@mui/icons-material";
 import SchoolIcon from "@mui/icons-material/School";
 import {
   Avatar,
@@ -52,8 +52,8 @@ const ProfilePage = () => {
       }}
     >
       {/* Left Column - Suggestions - 20% */}
-      <Box sx={{ width: "20%", p: 3, pl: 4 }}>
-        <Box sx={{ mb: 3 }}>
+      <Box sx={{ width: "10%", p: 3, pl: 4 }}>
+        {/* <Box sx={{ mb: 3 }}>
           <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 2 }}>
             <ThumbUp sx={{ color: "#4B93CD" }} />
             <Typography sx={{ color: "#4B93CD" }}>Gợi ý cho bạn</Typography>
@@ -74,7 +74,7 @@ const ProfilePage = () => {
             </Box>
             <Typography>Đã lưu</Typography>
           </Box>
-        </Box>
+        </Box> */}
       </Box>
 
       {/* Middle Column - Main Profile Content - 50% */}

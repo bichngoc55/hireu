@@ -1,22 +1,20 @@
-import React, { useState } from "react";
+import {
+  DescriptionOutlined,
+  GroupOutlined,
+  HomeOutlined,
+  VideoCallOutlined,
+  WorkOutline,
+} from "@mui/icons-material";
 import {
   AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  Badge,
   Avatar,
   Box,
+  IconButton,
   styled,
+  Toolbar,
+  Typography
 } from "@mui/material";
-import {
-  HomeOutlined,
-  DescriptionOutlined,
-  WorkOutline,
-  VideoCallOutlined,
-  GroupOutlined,
-  //   NotificationsOutlined,
-} from "@mui/icons-material";
+import React, { useState } from "react";
 
 import logo from "../assets/logo_HireU.png";
 
@@ -147,6 +145,10 @@ const Navbar = () => {
               "&:hover": {
                 opacity: 0.8,
               },
+            }}
+            onClick={() => {
+              setActiveTab("/profile"); // Đặt lại activeTab về "/home"
+              navigate("/profile"); // Điều hướng về trang "/home"
             }}
           >
             <Avatar
