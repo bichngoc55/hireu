@@ -69,10 +69,10 @@ const NavbarItem = styled(Box)(({ theme, active }) => ({
 }));
 
 const Navbar = () => {
-  const [activeTab, setActiveTab] = useState("/home");
+  const [activeTab, setActiveTab] = useState("/");
   const navigate = useNavigate();
   const navItems = [
-    { id: "/home", icon: HomeOutlined, label: "Trang chủ" },
+    { id: "/", icon: HomeOutlined, label: "Trang chủ" },
     { id: "/interview", icon: DescriptionOutlined, label: "Phỏng vấn" },
     { id: "/jobs", icon: WorkOutline, label: "Việc làm" },
     { id: "/webinar", icon: VideoCallOutlined, label: "Webinar" },

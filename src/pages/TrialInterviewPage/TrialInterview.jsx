@@ -9,7 +9,7 @@ import InterviewCard from "../../components/InterviewCard/InterviewCard";
 import ExpertCard from "../../components/ExpertCard";
 import InterviewCalendar from "./InterviewCalendar";
 import RegistrationRules from "./RegistrationRules";
-import Question from "../Question"
+import Question from "../Question";
 function TrialInterview() {
   const [selectedTab, setSelectedTab] = useState("home");
   const [searchTerm, setSearchTerm] = useState("");
@@ -231,8 +231,7 @@ function TrialInterview() {
             maxWidth: 1200,
             margin: "0 auto",
             display: "grid",
-            gridTemplateColumns:
-              selectedTab === "schedule" ? "1fr" : "1fr 380px",
+            gridTemplateColumns: selectedTab === "home" ? "1fr 380px" : "1fr",
             gap: 3,
           }}
         >
@@ -276,14 +275,15 @@ function TrialInterview() {
               ))}
             </Box>
           )}
+
           {selectedTab === "schedule" && (
             <Box sx={{ flex: 2, maxWidth: "100%" }}>
               <InterviewCalendar />
             </Box>
           )}
           {selectedTab === "questions" && (
-            <Box sx={{ flex: 2, maxWidth: "100%" }}>
-              <Question/>
+            <Box sx={{ flex: 2, maxWidth: "100%"}}>
+              <Question />
             </Box>
           )}
         </Box>
