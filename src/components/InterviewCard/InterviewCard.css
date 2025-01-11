@@ -81,17 +81,21 @@
 }
 
 .register-button {
-  color: #4B93CD;
+  color: #4b93cd;
   background-color: white;
   padding: 8px 16px;
-  border: 1px solid #4B93CD;
+  border: 1px solid #4b93cd;
   border-radius: 4px;
   cursor: pointer;
   font-family: "Asap", sans-serif;
 }
 
 .register-button:hover {
-  background-color: #98C4EB;
+  background-color: #98c4eb;
   color: white;
-  border: none
+  border: none;
+}
+.card-title:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
