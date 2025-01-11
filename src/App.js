@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage";
 import JobPortalPage from "./pages/JobPortalPage/JobPortalPage";
 import RegistrationRules from "./pages/TrialInterviewPage/RegistrationRules";
 import InterviewDetail from "./pages/InterviewDetail/InterviewDetail";
+import TrialInterview from "./pages/TrialInterviewPage/TrialInterview";
 
 function App() {
   return (
